@@ -78,7 +78,7 @@ Population *xor_test(int gens) {
 	#endif
 
 	char temp[50];
-	sprintf (temp, "gen_%d", gen);
+	sprintf (temp, "generations/gen_%d", gen);
 
 	//Check for success
 	if (xor_epoch(pop,gen,temp,winnernum,winnergenes,winnernodes)) {
