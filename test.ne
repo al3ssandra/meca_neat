@@ -1,4 +1,4 @@
-trait_param_mut_prob 0.5 
+trait_param_mut_prob 0.5
 trait_mutation_power 1.0
 linktrait_mut_sig 1.0
 nodetrait_mut_sig 0.5
