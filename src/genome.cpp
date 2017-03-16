@@ -229,7 +229,7 @@ Genome::Genome(int new_id,int i, int o, int n,int nmax, bool r, double linkprob)
 	int count;
 
 	int ncount; //Node and connection counters
-	int ccount;
+//	int ccount; UNUSED
 
 	int row;  //For navigating the matrix
 	int col;
@@ -306,7 +306,7 @@ Genome::Genome(int new_id,int i, int o, int n,int nmax, bool r, double linkprob)
 	//cout<<"Built nodes"<<endl;
 
 	//Connect the nodes 
-	ccount=1;  //Start the connection counter
+//	ccount=1;  //Start the connection counter UNUSED
 
 	//Step through the connection matrix, creating connection genes
 	cmp=cm;
@@ -1957,7 +1957,7 @@ void Genome::mutate_add_sensor(std::vector<Innovation*> &innovs,double &curinnov
 //*correct order* into the list of genes in the genome
 void Genome::add_gene(std::vector<Gene*> &glist,Gene *g) {
   std::vector<Gene*>::iterator curgene;
-  double p1innov;
+//  double p1innov; UNUSED
 
   double inum=g->innovation_num;
 
@@ -2937,13 +2937,13 @@ double Genome::compatibility(Genome *g) {
 	double mut_diff_total=0.0;
 	double num_matching=0.0;  //Used to normalize mutation_num differences
 
-	double max_genome_size; //Size of larger Genome
+/*	double max_genome_size; //Size of larger Genome
 
 	//Get the length of the longest Genome for percentage computations
-	if (genes.size()<(g->genes).size()) 
+	if (genes.size()<(g->genes).size())
 		max_genome_size=(g->genes).size();
 	else max_genome_size=genes.size();
-
+*/ // UNUSED
 	//Now move through the Genes of each potential parent 
 	//until both Genomes end
 	p1gene=genes.begin();
