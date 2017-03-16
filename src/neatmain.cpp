@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 
   //list<NNode*> nodelist;
 
-  int pause;
+//  int pause;
 
   NEAT::Population *p=0;
 
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
   thecart->generalization_test=false;
   pole2_evaluate(org,0,thecart);
   cout<<"made score "<<org->fitness<<endl;
-  cin>>pause;
+    cin>>pause;
   */
 
   int choice;

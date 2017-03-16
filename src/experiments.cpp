@@ -137,13 +137,13 @@ Population *xor_test(int gens) {
 bool xor_evaluate(Organism *org) {
   Network *net;
   double out[4]; //The four outputs
-  double this_out; //The current output
+//  double this_out; //The current output
   int count;
   double errorsum;
 
   bool success;  //Check for successful activation
-  int numnodes;  /* Used to figure out how many nodes
-		    should be visited during activation */
+//  int numnodes;  /* Used to figure out how many nodes UNUSED
+/*		    should be visited during activation */
 
   int net_depth; //The max depth of the network to be activated
   int relax; //Activates until relaxation
@@ -160,7 +160,7 @@ bool xor_evaluate(Organism *org) {
    double expected[N_EXAMPLE] = {1.0, 1.0, 1.0, 0.0};
 
   net=org->net;
-  numnodes=((org->gnome)->nodes).size();
+//  numnodes=((org->gnome)->nodes).size(); UNUSED
 
   net_depth=net->max_depth();
 
@@ -178,7 +178,7 @@ bool xor_evaluate(Organism *org) {
     //use depth to ensure relaxation
     for (relax=0;relax<=net_depth;relax++) {
       success=net->activate();
-      this_out=(*(net->outputs.begin()))->activation;
+ //     this_out=(*(net->outputs.begin()))->activation; UNUSED
     }
 
     //we retrieve the network output

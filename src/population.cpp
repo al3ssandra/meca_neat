@@ -68,7 +68,7 @@ Population::Population(std::vector<Genome *> genomeList, float power) {
     highest_fitness = 0.0;
     highest_last_changed = 0;
 
-    int count;
+//    int count; UNUSED
     Genome *new_genome;
     Organism *new_organism;
 
@@ -97,7 +97,7 @@ Population::Population(const char *filename) {
 
     char curword[128];  //max word size of 128 characters
     char curline[1024]; //max line size of 1024 characters
-    char delimiters[] = " \n";
+//    char delimiters[] = " \n"; UNUSED
 
     Genome *new_genome;
 
@@ -109,7 +109,7 @@ Population::Population(const char *filename) {
     cur_node_id = 0;
     cur_innov_num = 0.0;
 
-    int curwordnum = 0;
+//    int curwordnum = 0; UNUSED
 
     std::ifstream iFile(filename);
     if (!iFile) {
@@ -153,7 +153,7 @@ Population::Population(const char *filename) {
             else if (strcmp(curword, "/*") == 0) {
                 // New metadata possibly, so clear out the metadata
                 strcpy(metadata, "");
-                curwordnum = 1;
+                //curwordnum = 1; UNUSED
                 //strcpy(curword, NEAT::getUnit(curline, curwordnum++, delimiters));
                 ss >> curword;
 
@@ -424,7 +424,7 @@ bool Population::epoch(int generation) {
     Species *best_species;
     int final_expected;
 
-    int pause;
+//    int pause; UNUSED
 
     //Rights to make babies can be stolen from inferior species
     //and given to their superiors, in order to concentrate exploration on
@@ -442,9 +442,9 @@ bool Population::epoch(int generation) {
     bool best_ok;
 
     //We can try to keep the number of species constant at this number
-    int num_species_target = 4;
+//    int num_species_target = 4; UNUSED
     int num_species = species.size();
-    double compat_mod = 0.3;  //Modify compat thresh to control speciation
+//    double compat_mod = 0.3;  //Modify compat thresh to control speciation UNUSED
 
 
     //Keeping species diverse
